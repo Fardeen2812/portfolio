@@ -39,6 +39,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: ASP-app
+          path: ./ASP-app 
       
       - name: Login to Azure
         uses: azure/login@v2
@@ -53,5 +54,5 @@ jobs:
         with:
           app-name: 'fardeenportfoliowebsite'
           slot-name: 'dev'
-          package: './index.html'
+          package: ./ASP-app/index.html 
           
